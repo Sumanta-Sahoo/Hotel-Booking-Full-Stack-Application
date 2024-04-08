@@ -15,30 +15,30 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class BookedRoom {
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "roomId")
-    private Room room;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bookedRoomId;
 
-    @Column(name = "check_in")
+    @Temporal(TemporalType.DATE)
     private LocalDate checkInDate;
-    @Column(name = "check_out")
+    @Temporal(TemporalType.DATE)
     private LocalDate checkOutDate;
-    @Column(name = "name")
+    @Basic
     private String guestFullName;
-    @Column(name = "email")
+    @Basic
     private String guestEmail;
-    @Column(name = "adult")
+    @Basic
     private Integer noOfAdults;
-    @Column(name = "children")
+    @Basic
     private Integer noOfChildren;
-    @Column(name = "total_guest")
+    @Basic
     private Integer totalNoOfGuests;
-    @Column(name = "booking_code")
+    @Basic
     private String bookingConfirmationCode;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "roomId")
+    private Room room;
 
     public void calculateTotalNoOfGuests(){
         this.totalNoOfGuests = this.noOfAdults+this.noOfChildren;

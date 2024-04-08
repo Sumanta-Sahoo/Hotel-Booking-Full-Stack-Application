@@ -26,6 +26,7 @@ public class Room {
     private Boolean isBooked;
     @Lob
     private Blob roomPhoto;
+    @OneToMany(mappedBy = "room", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<BookedRoom> roomBookings;
 
     public Room(){
