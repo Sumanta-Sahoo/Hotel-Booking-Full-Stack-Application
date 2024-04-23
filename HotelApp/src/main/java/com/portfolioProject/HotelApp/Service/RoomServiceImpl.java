@@ -2,6 +2,7 @@ package com.portfolioProject.HotelApp.Service;
 
 import com.portfolioProject.HotelApp.Model.Room;
 import com.portfolioProject.HotelApp.Repository.IRoomRepository;
+import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,6 +17,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@NotNull
 public class RoomServiceImpl implements IRoomService{
 
     private final IRoomRepository roomRepository;
@@ -35,12 +37,12 @@ public class RoomServiceImpl implements IRoomService{
 
     @Override
     public List<Room> getAllRoom() {
-        return List.of();
+        return roomRepository.findAll();
     }
 
     @Override
     public Optional<Room> getRoomById(Long roomId) {
-        return Optional.empty();
+        return Optional.of(roomRepository.findById(roomId).get());
     }
 
     @Override
