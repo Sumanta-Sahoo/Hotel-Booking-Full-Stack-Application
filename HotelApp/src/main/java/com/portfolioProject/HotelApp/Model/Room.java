@@ -23,7 +23,7 @@ public class Room {
 
     private String roomType;
     private BigDecimal roomPrice;
-    private Boolean isBooked;
+    private Boolean isBooked = false;
     @Lob
     private Blob roomPhoto;
     @OneToMany(mappedBy = "room", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
