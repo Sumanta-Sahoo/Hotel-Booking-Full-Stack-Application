@@ -33,6 +33,7 @@ public class BookedRoom {
     private Integer noOfChildren;
     @Basic
     private Integer totalNoOfGuests;
+    @Setter
     @Basic
     private String bookingConfirmationCode;
 
@@ -50,9 +51,6 @@ public class BookedRoom {
     public void setNoOfChildren(Integer noOfChild){
         noOfChildren = noOfChild;
         calculateTotalNoOfGuests();
-    }
-    public void setBookingConfirmationCode(String code){
-        this.bookingConfirmationCode = code;
     }
 
 }
