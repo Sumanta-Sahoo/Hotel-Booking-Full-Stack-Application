@@ -11,7 +11,7 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-public class RoomResponse {
+public class    RoomResponse {
     private Long roomId;
 
     private String roomType;
