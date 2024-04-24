@@ -29,7 +29,7 @@ This project is a Hotel Booking App developed using Java Full-Stack technologies
 
 To run the Hotel Booking App locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/yourusername/hotel-booking-app.git`
+1. Clone the repository: `git clone https://github.com/Sumanta-Sahoo/Hotel-Booking-Full-Stack-Application-Backend.git `
 2. Navigate to the project directory: `cd hotel-booking-app`
 3. Set up the backend:
    - Navigate to the `backend` directory.
@@ -56,6 +56,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
-Special thanks to [contributors](CONTRIBUTORS.md) who helped in developing this project.
+Special thanks to INeuron.ai Instructor who helped in developing this project.
 
 ---
